@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('networkwires2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .box {
+      background-color: #6699CC; 
+      padding: 10px;
+      border: 3px solid violet;
+      font-size: 18px;
+      font-weight:bold;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.5s; 
+      margin: 10px;
+      width: 490px;
+    }
+
+    .box:hover {
+      background-color: #FF1493; 
+      border: 5px solid blue;
+      transform: translateZ(-20px); /* Extend the depth on hover */
+      box-shadow: 0 0 10px #0FF; /* Add radiance effect */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box; /* Include padding in the width */
+      border-radius: 10px;
+      background-color: #FF6500; /* Light Pink background color */
+      color: #fff; /* Black text color */
+      font-weight: bold;
+      
+    }
+
+    .submit-button {
+      display: block;
+      width: 520px; /* Match the width of the boxes */
+      margin: 10px;
+      padding: 15px;
+      border: 3px solid pink;
+      font-size: 18px;
+      font-weight:bold;
+      border-radius: 10px;
+      background-color: #4CAF50; /* Green */
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.5s; /* Smooth color transition on hover */
+    }
+
+    .submit-button:hover {
+      background-color: #008000; /* Darker Sea Green on hover */
+      border: 5px solid yellow;
+      transform: translateZ(-20px); /* Extend the depth on hover */
+      box-shadow: 0 0 10px #0FF; /* Add radiance effect */
+    }
+
+    .go-back-button, .logout-button {
+      background-color: #666;
+      color: #fff;
+      border: 3px solid #777;
+      padding: 10px 20px;
+      margin: 10px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight:bold;
+      border-radius: 10px;
+      cursor: pointer;
+      width:250px;
+      transition: background-color 0.5s; /* Smooth color transition on hover */
+    }
+    
+    .radio-option {
+      margin-right: 10px;
+    }
+
+    .radio-option:hover {
+      color: #00FF00; /* Slightly light neon green */
+    }
+    
+    .go-back-button:hover, .logout-button:hover {
+      background-color: #FF4500;
+      border: 5px solid red;
+      transform: translateZ(-20px); /* Extend the depth on hover */
+      box-shadow: 0 0 10px #0FF; /* Add radiance effect */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Protocol Research Analysis</h1>
+  </div>
+  <div class="box">
+    <form id="myForm" method="post" action="nettest.php">
+      <label for="question1">Select the Protocol:</label>
+      <div>
+        <input type="radio" id="tcp" name="question1" value="TCP"> TCP<br>
+        <input type="radio" id="udp" name="question1" value="UDP"> UDP<br>
+        <input type="radio" id="arp" name="question1" value="ARP"> ARP<br>
+      </div>
+    
+  </div>
+  <div class="box">
+    <label for="question2">Select the field:</label>
+    <select name="question2" id="question2">
+      <option value="">Select an option</option>
+      <option value="TimeStamp">TimeStamp</option>
+      <option value="SourceMac">SourceMac</option>
+      <option value="DestinationMac">DestinationMac</option>
+      <option value="SourceIP">SourceIP</option>
+      <option value="DestinationIP">DestinationIP</option>
+      <option value="Destinationport">Destinationport</option>
+      <option value="All">All</option>
+      
+    </select>
+  </div>
+  
+  <button class="submit-button" type="submit" id="submit">Submit</button>
+  </form>
+  <div class="go-back-logout-box">
+    <button class="go-back-button" onclick="window.location.href='firstpage.html'">Go Back</button>
+    <button class="logout-button" onclick="window.location.href='login.html'">Log Out</button>
+  </div>
+</body>
+</html>
+
+
+

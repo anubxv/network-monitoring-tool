@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('network.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+	body:hover{
+		filter: brightness(150%);
+		filter: contrast(150%);
+		
+	}
+
+        .login-container {
+            width: 400px;
+            padding: 20px;
+	    border: 3px solid blue;
+	    text-align:center;
+            background-color: #9370DB/*#F5347F*/;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+	.login-container:hover {
+		border: 5px solid #FFA07A;
+		background-color: #0000CD; 
+		transform: translateZ(-20px); 
+		box-shadow: 0 0 10px #0FF; 
+	}
+
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-input {
+            width: 92%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #008000;
+            font-weight:bold;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: #32CD32;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>NETWORK ANALYSIS</h1>
+        <form action="logindb.php" method="post">
+            <input type="text" class="form-input" name="username" placeholder="Username" required>
+            <input type="password" class="form-input" name="password" placeholder="Password" required>
+            <button type="submit" class="form-button">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+

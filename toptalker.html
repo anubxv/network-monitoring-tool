@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('networktop.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .container {
+      text-align: center;
+      background-color: red;
+      padding: 20px;
+      border: 3px solid orange; 
+      border-radius: 10px;
+      transition: border 0.5s, background-color 0.5s;
+    }
+
+    .container:hover {
+      border: 5px solid #0f6; 
+      background-color: #800080; 
+      transform: translateZ(-20px);
+      box-shadow: 0 0 10px #0FF; 
+    }
+
+    .radio-options {
+      margin: 10px 0;
+    }
+
+    .radio-label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .submit-button, .go-back-button, .logout-button {
+      background-color: pink;
+      color: #000;
+      border: 2px solid white;
+      padding: 10px 25px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 10px 5px;
+    }
+
+    .submit-button:hover, .go-back-button:hover, .logout-button:hover {
+      background-color: #0f6;
+      border: 3px solid yellow;
+      transform: translateZ(-20px);
+      box-shadow: 0 0 10px #0FF; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Top Packets Analysis</h1>
+    <form method="post" action="toptalker.php">
+      <div class="radio-options">
+        <label class="radio-label"><input type="radio" name="packetType" value="ARP"> ARP</label>
+        <label class="radio-label"><input type="radio" name="packetType" value="UDP"> UDP</label>
+        <label class="radio-label"><input type="radio" name="packetType" value="TCP"> TCP</label>
+      </div>
+      <button class="submit-button" type="submit">Retrieve Top Packets</button>
+    </form>
+    
+    <a href="firstpage.html"><button class="go-back-button">Go Back</button></a>
+    <a href="login.php"><button class="logout-button">Log Out</button></a>
+  </div>
+</body>
+</html>
+
+
